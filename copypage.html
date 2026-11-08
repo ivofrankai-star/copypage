@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ivo Frank | Direct-response besedilo za slovenski trg. Mehanizem, ki ga bralec lahko preveri; vsaka trditev pripeta na vir; 4 vrata kakovosti pred dostavo. 5 celih kosov spec dela za ogled. Brezplačen pregled mehanizma (20 min).">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Ivo Frank | Prodajno besedilo z mehanizmom (slovenski trg)</title>
+  <style>
+    /* =========================================================
+       DESIGN TOKENS
+       ========================================================= */
+    :root {
+      --color-amber: #D4A843;
+      --color-amber-dark: #B8923A;
+      --color-amber-light: #F5E6C8;
+      --color-ink: #1A1A1A;
+      --color-ink-soft: #333333;
+      --color-mute: #666666;
+      --color-paper: #FAFAFA;
+      --color-white: #FFFFFF;
+      --color-border: #E5E5E5;
+      --color-focus: #B8923A;
+      --color-error: #C0392B;
+      --color-success: #27AE60;
+
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: 1.125rem;
+      --text-xl: 1.25rem;
+      --text-2xl: 1.5rem;
+      --text-3xl: 2rem;
+      --text-4xl: 2.5rem;
+      --text-5xl: 3rem;
+
+      --leading-tight: 1.1;
+      --leading-snug: 1.375;
+      --leading-normal: 1.6;
+      --leading-relaxed: 1.75;
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+
+      --container-max: 72rem;
+      --container-pad: var(--space-6);
+
+      --radius: 8px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-stack);
+      font-size: var(--text-base);
+      line-height: var(--leading-normal);
+      color: var(--color-ink);
+      background: var(--color-paper);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4, p, ul, ol, blockquote, table, figure { margin: 0; }
+    ul, ol { padding-left: 1.25rem; }
+    a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 2px; }
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; }
+    table { border-collapse: collapse; width: 100%; }
+
+    :focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--container-pad); }
+    .section { padding-block: var(--space-16); }
+    .prose-narrow { max-width: 48rem; margin-inline: auto; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-amber-dark);
+      font-weight: 600;
+    }
+    .section h2 { font-size: var(--text-3xl); line-height: var(--leading-tight); letter-spacing: -0.01em; margin-top: var(--space-3); }
+    .section p { color: var(--color-ink-soft); }
+    .lead { font-size: var(--text-lg); line-height: var(--leading-snug); color: var(--color-ink-soft); }
+
+    .skip-link {
+      position: absolute; left: var(--space-4); top: -100px; z-index: 1000;
+      background: var(--color-ink); color: var(--color-white);
+      padding: var(--space-3) var(--space-4); border-radius: var(--radius);
+      transition: top 0.2s ease; text-decoration: none;
+    }
+    .skip-link:focus { top: var(--space-4); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+      min-height: 52px; padding-inline: var(--space-6); border: none; border-radius: var(--radius);
+      font-size: var(--text-base); font-weight: 600; letter-spacing: 0.01em; text-decoration: none;
+      transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn--primary { background: var(--color-amber); color: var(--color-ink); }
+    .btn--primary:hover, .btn--primary:focus-visible { background: var(--color-amber-dark); color: var(--color-white); }
+    .btn--primary:active { transform: translateY(1px); }
+    .btn--secondary { background: var(--color-ink); color: var(--color-white); }
+    .btn--secondary:hover { background: var(--color-ink-soft); }
+    .btn--block { width: 100%; }
+    .btn[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+    /* Hero — BRAND BACKGROUND */
+    .hero { background: var(--color-amber); color: var(--color-ink); border-bottom: 1px solid var(--color-amber-dark); padding-block: var(--space-20) var(--space-16); }
+    .hero__inner { max-width: 48rem; margin-inline: auto; text-align: center; }
+    .hero h1 { font-size: clamp(var(--text-3xl), 6vw, var(--text-4xl)); line-height: var(--leading-tight); letter-spacing: -0.02em; margin-bottom: var(--space-6); color: var(--color-ink); }
+    .hero__sub { font-size: var(--text-lg); line-height: var(--leading-snug); color: var(--color-ink-soft); margin-bottom: var(--space-8); }
+    .hero__support { font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-5); }
+    .hero .btn--primary { background: var(--color-ink); color: var(--color-white); width: 100%; max-width: 24rem; margin-inline: auto; }
+    .hero .btn--primary:hover, .hero .btn--primary:focus-visible { background: var(--color-ink-soft); }
+    @media (min-width: 48rem) { .hero .btn--primary { width: auto; } }
+
+    /* Work Pieces */
+    .piece { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6); margin-top: var(--space-6); }
+    .piece:first-child { margin-top: var(--space-8); }
+    .piece__title { font-size: var(--text-xl); font-weight: 700; color: var(--color-ink); margin-bottom: var(--space-2); }
+    .piece__problem { font-size: var(--text-base); color: var(--color-ink-soft); margin-bottom: var(--space-3); }
+    .piece__mechanism { font-size: var(--text-base); color: var(--color-ink); font-weight: 600; margin-bottom: var(--space-3); }
+    .piece__detail { font-size: var(--text-sm); color: var(--color-ink-soft); margin-bottom: var(--space-4); }
+    .piece__quote {
+      font-size: var(--text-base); color: var(--color-ink); font-style: italic;
+      border-left: 3px solid var(--color-amber); padding-left: var(--space-4);
+      margin-bottom: var(--space-4); line-height: var(--leading-snug);
+    }
+    .piece__label { font-family: var(--font-mono); font-weight: 600; color: var(--color-amber-dark); }
+    .piece-link { display: inline-block; font-weight: 600; color: var(--color-amber-dark); text-decoration: none; }
+    .piece-link:hover { text-decoration: underline; }
+
+    /* How I Work */
+    .how-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-8); }
+    @media (min-width: 64rem) { .how-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
+    .how-col { background: var(--color-paper); border: 1px solid var(--color-border); border-top: 4px solid var(--color-amber); border-radius: var(--radius); padding: var(--space-5); }
+    .how-week { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.14em; color: var(--color-mute); margin-bottom: var(--space-1); }
+    .how-title { font-size: var(--text-lg); font-weight: 700; color: var(--color-ink); margin-bottom: var(--space-3); }
+    .how-list { list-style: none; padding: 0; margin: 0; }
+    .how-list li { font-size: var(--text-sm); color: var(--color-ink-soft); padding: var(--space-1) 0 var(--space-1) var(--space-4); position: relative; line-height: var(--leading-snug); }
+    .how-list li::before { content: "•"; position: absolute; left: 0; color: var(--color-amber-dark); font-family: var(--font-mono); }
+    .trust { background: var(--color-white); }
+    .trust__body { font-size: var(--text-lg); color: var(--color-ink-soft); margin-top: var(--space-3); }
+    .trust__limits { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-8); }
+    @media (min-width: 48rem) { .trust__limits { grid-template-columns: repeat(2, 1fr); } }
+    .trust-card { padding: var(--space-5); border-radius: var(--radius); border: 1px solid var(--color-border); }
+    .trust-card--limit { background: #FBEAE7; border-color: rgba(192,57,43,0.3); }
+    .trust-card h4 { font-size: var(--text-sm); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-mute); margin-bottom: var(--space-2); }
+    .trust-card p { font-size: var(--text-base); color: var(--color-ink); }
+
+    /* Contact Form */
+    .cta-final { background: var(--color-white); border-top: 1px solid var(--color-border); padding-block: var(--space-16); }
+    .cta-final__inner { max-width: 48rem; margin-inline: auto; text-align: center; }
+    .cta-final h2 { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
+    .cta-final p { font-size: var(--text-lg); color: var(--color-ink-soft); margin-bottom: var(--space-6); }
+
+    .form-field { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-4); max-width: 32rem; margin-inline: auto; }
+    .form-field label { font-size: var(--text-sm); font-weight: 600; color: var(--color-ink); }
+    .form-field input, .form-field textarea { min-height: 48px; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius); font: inherit; background: var(--color-white); color: var(--color-ink); }
+    .form-field textarea { min-height: 120px; resize: vertical; }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--color-amber-dark); outline: 2px solid var(--color-focus); outline-offset: 1px; }
+    .form-field input[aria-invalid="true"], .form-field textarea[aria-invalid="true"] { border-color: var(--color-error); }
+    .form-msg { font-size: var(--text-sm); min-height: 1.25rem; margin-top: var(--space-2); }
+    .form-msg--error { color: var(--color-error); }
+    .form-msg--success { color: var(--color-success); }
+    .microcopy { font-size: var(--text-xs); color: var(--color-mute); margin-top: var(--space-3); text-align: center; }
+
+    /* Footer */
+    .footer { background: var(--color-ink); color: var(--color-white); padding-block: var(--space-12) var(--space-8); }
+    .footer__inner { text-align: center; max-width: 40rem; margin-inline: auto; }
+    .footer__email { font-size: var(--text-2xl); font-weight: 700; color: var(--color-amber); text-decoration: none; display: inline-block; margin-top: var(--space-4); }
+    .footer__email:hover { text-decoration: underline; }
+    .footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-6); margin-top: var(--space-6); font-size: var(--text-sm); }
+    .footer__links a { color: var(--color-white); text-decoration: none; }
+    .footer__links a:hover { color: var(--color-amber); text-decoration: underline; }
+    .footer__legal { margin-top: var(--space-8); font-size: var(--text-xs); color: rgba(255,255,255,0.6); }
+
+    /* Toast */
+    .toast { position: fixed; left: 50%; bottom: var(--space-6); transform: translateX(-50%) translateY(120%); opacity: 0; background: var(--color-ink); color: var(--color-white); padding: var(--space-4) var(--space-6); border-radius: var(--radius); box-shadow: var(--shadow-md); font-size: var(--text-sm); max-width: 90vw; transition: transform 0.3s ease, opacity 0.3s ease; z-index: 1000; }
+    .toast.is-visible { transform: translateX(-50%) translateY(0); opacity: 1; }
+    .toast--error { background: var(--color-error); }
+    .toast--success { background: var(--color-success); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Pojdi na vsebino</a>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" role="banner">
+    <div class="container hero__inner">
+      <h1>najprej založim vire. nato preverim trditve. šele potem pišem.</h1>
+      <p class="hero__sub">Prodajno besedilo, ki zdrži prvi pomislek: mehanizem, ki ga bralec razume in lahko sam preveri, vsaka trditev pripeta na vir, brez umetne stresnosti in prepovedanih fraz. Za slovenski trg, v slovenščini.</p>
+      <button type="button" class="btn btn--primary" data-scroll="#contact" aria-label="Poišči obrazec za prijavo na brezplačen pregled mehanizma">Pregled mehanizma (brezplačno, 20 min)</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ WORK / PORTFOLIO ============ -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <p class="eyebrow">del</p>
+        <h2 id="work-heading">5 kosov, ki jih vodi mehanizem</h2>
+        <p style="font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-4);">Vseh 5 kosov je spec dela — nastalo za prikaz, ne kot plačana naročila. Kjer je naročilo resnično ali podatki resnični, je to izrecno zapisano.</p>
+
+        <!-- Kos 1: Lumar (VSL — gradbeništvo / B2C) -->
+        <article class="piece" id="piece-lumar-vsl">
+          <h3 class="piece__title">Lumar montažna hiša — VSL scenarij "Potrkajte" (~6 min govora)</h3>
+          <p class="piece__problem"><strong>Problem:</strong> mlada družina med klasično in montažno gradnjo; strahovi: "kartonasta hiša", dve leti organiziranja gradbišča, drobni tisk in aneksi po podpisu.</p>
+          <p class="piece__mechanism"><strong>Mehanizem:</strong> potrkajte na steno. Dvojna obloga (15 mm OSB + 10 mm mavčno-vlaknena plošča) je mehanizem, ki ga kupec preveri z lastno roko — isto načelo "preverite sami" nese proces do ponudbe.</p>
+          <p class="piece__detail"><strong>Vir:</strong> izjave strank so resnične (s privolitvijo za objavo z imenom in krajem).<br>
+          <strong>Izdelano:</strong> scenarij VSL v 6 delih (hook, agitacija, razkritje mehanizma, dokazna mreža, ponudba, zaključek). Lead-gen: brezplačen posvet (60–90 min).</p>
+          <p class="piece__quote">"Strah pač ostane. Sedi namreč v dlani, ki bi rada potrkala."</p>
+          <a href="#" class="piece-link" data-notion="01_LUMAR">Ogled celega besedila →</a>
+        </article>
+
+        <!-- Kos 2: Lunos e²60 (booking funnel — HVAC / B2C) -->
+        <article class="piece" id="piece-lunos-e260">
+          <h3 class="piece__title">Lunos e²60 — booking stran za ogled z meritvijo vlage (B2C)</h3>
+          <p class="piece__problem"><strong>Problem:</strong> nova, zatesnjena okna — zatohla spalnica, orošena okna, črna lisa za omaro, ki se kljub beljenju vrača.</p>
+          <p class="piece__mechanism"><strong>Mehanizem:</strong> najprej izmerimo, šele nato belimo ali vrtamo. Meritev primerjamo s priporočilom NIJZ (40–60 %) in mejo 75 %, pri kateri začne rasti plesen; če je vzrok drugje (toplotni most, cev), to povemo brez ovinkarjenja.</p>
+          <p class="piece__detail"><strong>Vir:</strong> resnični javni podatki (Eko sklad, poziv 126SUB-OB26, stanje 5. 11. 2026) — brez TEST-a.<br>
+          <strong>Izdelano:</strong> kratek booking funnel (~544 besed + pravna mikrotekst obrazca). Lead-gen: brezplačen ogled na domu z meritvijo vlage, izračun spodbude (do 30 % priznanih stroškov; največ 300 EUR na napravo — za par dvakrat po 300 EUR) in okvirna ponudba.</p>
+          <p class="piece__quote">"Beljenje lise skrije, vzroka pa ne."</p>
+          <a href="#" class="piece-link" data-notion="02_LUNOS">Ogled celega besedila →</a>
+        </article>
+
+        <!-- Kos 3: Segway Navimow i105E (dolga prodajna stran — demo / [TEST]) -->
+        <article class="piece" id="piece-navimow-i105e">
+          <h3 class="piece__title">Segway Navimow i105E — dolga prodajna stran, 8 sekcij (demo, [TEST])</h3>
+          <p class="piece__problem"><strong>Problem:</strong> obljubljeni prosti dan se ne zgodi — žica (pri klasičnih robotskih kosilnicah) se sčasoma pregrizne, antena pa stoji tam, kjer je najbolj priročno, ne tam, kjer vidi največ neba.</p>
+          <p class="piece__mechanism"><strong>Mehanizem:</strong> antena na pravem mestu in skrbno narisana mapa vrta — ta korak ob nakupu opravi operater (do 31. 3. 2027 brezplačno, brez doplačil).</p>
+          <p class="piece__detail"><strong>Vir:</strong> proizvajalčeva navodila + neodvisni testi (Notebookcheck 29. 3. 2024, Expert Reviews 5. 6. 2024). Operater (Zelena Trata d.o.o.) je izmišljen [TEST].<br>
+          <strong>Izdelano:</strong> prodajna stran ~1.445 besed, 8 sekcij. 30-dnevni preizkus doma, poleg zakonskih pravic (ZVPot-1: 14 dni odstopa; 2-letno jamstvo za skladnost).</p>
+          <p class="piece__detail"><span class="piece__label">RAZKRITJE:</span> demo projekt; vse oznake [TEST] ostanejo vidne.</p>
+          <p class="piece__quote">"Sobota je spet vaša. Trato pokosi robot."</p>
+          <a href="#" class="piece-link" data-notion="03_NAVIMOW">Ogled celega besedila →</a>
+        </article>
+
+        <!-- Kos 4: Daikin Altherma 3 R (e-poštna sekvenca — ogrevanje / B2B2C) -->
+        <article class="piece" id="piece-daikin-3r">
+          <h3 class="piece__title">Daikin Altherma 3 R — 5-dnevna e-poštna sekvenca (lead-gen za izvajalca)</h3>
+          <p class="piece__problem"><strong>Problem:</strong> lastnik starejše hiše na kurilno olje okleva: cena, subvencija Eko sklada, mraz in hrup zunanje enote.</p>
+          <p class="piece__mechanism"><strong>Mehanizem:</strong> "odgovor stoji v vaši kurilnici, dokler je stari kotel še tam." Temperatura vode, ki jo kotel pošilja v radiatorje, pove, kako učinkovito bo črpalka grela vašo hišo; fotografija še priklopljenega kotla je pogoj višje spodbude (do 50 % priznanih stroškov, največ 4.500 EUR). Zato ogled pred tem, ko kotel odide.</p>
+          <p class="piece__detail"><strong>Vir:</strong> resnični javni podatki (gov.si, Eko sklad 126SUB-OB26, proizvajalčeva dokumentacija), datum stanja 5. 11. 2026.<br>
+          <strong>Izdelano:</strong> 5 e-pošt (150–200 besed na e-pošto); mehak CTA v e-poštah 1–4, trdi v 5.</p>
+          <p class="piece__quote">"Daikin Altherma 3 R ničesar ne kuri."</p>
+          <a href="#" class="piece-link" data-notion="04_DAIKIN">Ogled celega besedila →</a>
+        </article>
+
+        <!-- Kos 5: HealthyWorld Magnezij 165 mg (Meta oglas — prehransko dopolnilo / DTC) -->
+        <article class="piece" id="piece-healthyworld-magnezij">
+          <h3 class="piece__title">HealthyWorld® Magnezij 165 mg — Meta oglas (Facebook / Instagram)</h3>
+          <p class="piece__problem"><strong>Problem:</strong> odrasli v službi in družini tablet in kapsul ne marajo; utrujenost pa poznajo.</p>
+          <p class="piece__mechanism"><strong>Mehanizem:</strong> oblika kot dostava — 2 gumi bonbona na dan = 165 mg magnezija, prežvečena med dvema opravkoma dolgega dneva. Samo dovoljena trditev ("Magnezij prispeva k zmanjševanju utrujenosti in izčrpanosti.") + iskren drobni tisk v glavnem besedilu (notri so sladkor, glukozni sirup, svinjska in goveja želatina).</p>
+          <p class="piece__detail"><strong>Vir:</strong> uradna stran izdelka healthyworld.si (produkt/cena, stanje 6. 11. 2026), EU uredbe (veljavna EFSA trditev) in slovenska zakonodaja (prehranska dopolnila).<br>
+          <strong>Izdelano:</strong> 1 varianta oglasa — naslov 15 besed, primarno besedilo 116 besed, gumb 3 besede; cena 16,99 € in cena na dan 0,38 € z datumom stanja.</p>
+          <p class="piece__quote">"Služba, trgovina, kuhanje. Seznam se do večera ne skrajša."</p>
+          <a href="#" class="piece-link" data-notion="05_HEALTHYWORLD">Ogled celega besedila →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ KAKO DELAM ============ -->
+    <section id="process" class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="eyebrow">kako delam</p>
+        <h2 id="process-heading">ne najamete "kopista". najamete ta postopek:</h2>
+
+        <div class="how-grid" role="list" aria-label="5-stopenjski postopek">
+          <div class="how-col" role="listitem">
+            <p class="how-week">KORAK 1</p>
+            <p class="how-title">Raziskava</p>
+            <ul class="how-list">
+              <li>jezik kupca iz realnih izjav, forumov in pregledov — ne iz moje glave</li>
+              <li>avatar: kaj ga ustavlja pred nakupom, čemur ne verjame</li>
+              <li>konkurenca: kaj trdijo vsi, kaj ostane prosto</li>
+            </ul>
+          </div>
+          <div class="how-col" role="listitem">
+            <p class="how-week">KORAK 2</p>
+            <p class="how-title">Trditve pod mikroskopom</p>
+            <ul class="how-list">
+              <li>vsaka številka in obljuba pripeta na vir z datumom stanja</li>
+              <li>seznam prepovedanih trditev (zakonodaja, pravila platform) sestavljen PRED pisanjem</li>
+              <li>če mehanizem ni dovolj različen, se ne piše — raziskava se poglobi ali projekt opusti</li>
+            </ul>
+          </div>
+          <div class="how-col" role="listitem">
+            <p class="how-week">KORAK 3</p>
+            <p class="how-title">Pisanje</p>
+            <ul class="how-list">
+              <li>ena velika ideja, mehanizem zaklenjen za celo besedilo</li>
+              <li>naravni slovenski ritem — brez angleških prevodnih značilnosti</li>
+              <li>koristi preračunane iz lastnosti, ne nasprotno</li>
+            </ul>
+          </div>
+          <div class="how-col" role="listitem">
+            <p class="how-week">KORAK 4</p>
+            <p class="how-title">Preverba</p>
+            <ul class="how-list">
+              <li>besedilo skozi 4 kontrole: skladnost trditev z virom, prepovedane fraze, specifičnost števil, jezikovna vrata (brez AI-evalijev)</li>
+              <li>rezultat preverbe: poročilo o skladnosti in sleditev virov za vsako številko</li>
+            </ul>
+          </div>
+          <div class="how-col" role="listitem">
+            <p class="how-week">KORAK 5</p>
+            <p class="how-title">Dostava</p>
+            <ul class="how-list">
+              <li>celo besedilo v dogovorjeni obliki</li>
+              <li>poročila priložena za nadaljnjo uporabo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-10); max-width: 48rem; margin-inline: auto;">
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">kaj prejmete</h3>
+          <ul style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
+            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">raziskovalni povzetek + mehanizem + struktura besedila</li>
+            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">celo besedilo (prodajna stran, e-poštna sekvenca, VSL scenarij, oglas, booking funnel)</li>
+            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">poročilo o skladnosti + sleditev virov za vsako številko</li>
+          </ul>
+          <style>
+            #process li::before { content: "✓"; position: absolute; left: 0; color: var(--color-amber-dark); font-weight: 700; }
+          </style>
+        </div>
+
+        <div style="margin-top: var(--space-6); max-width: 48rem; margin-inline: auto;">
+          <p style="font-size: var(--text-sm); color: var(--color-mute);"><strong>Lunos:</strong> raziskava na 49 virih, vsaka trditev z virom in datumom stanja (Eko sklad, NIJZ).</p>
+          <p style="font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-2);"><strong>HealthyWorld:</strong> 36 preverjenih trditev, 10 z opozorilom; vsaka številka z virom in datumom (EU uredbe, etiketa, cena).</p>
+        </div>
+
+        <p style="margin-top: var(--space-6); font-size: var(--text-sm); color: var(--color-mute); max-width: 48rem; margin-inline: auto;"><strong>kaj nikoli ne prejmete:</strong> izmišljene številke ali "pričevanja", umetna omejitev in lažna nujnost, superlativa brez virov, besedilo brez sledi virov.</p>
+      </div>
+    </section>
+
+    <!-- ============ DROBNI TISK ============ -->
+    <section id="trust" class="section trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <p class="eyebrow">drobni tisk</p>
+        <h2 id="trust-heading">spec dela. iskreno. brez dodatnega sladkorja.</h2>
+        <p class="trust__body">Brezplačen pregled mehanizma najprej. Vi se odločite potem.</p>
+
+        <div class="trust__limits">
+          <div class="trust-card trust-card--limit">
+            <h4>Kaj ni vključeno</h4>
+            <p>Upravljanje oglasov, SEO strategija, oblikovanje in izvedba, nastavitev e-šte ter dograjevanje seznamov. Besedilo napišem — distribucija je v vaših rokah. Spec dela na tej strani niso naročena dela; [TEST] oznake so jasne.</p>
+          </div>
+          <div class="trust-card">
+            <h4>Kako poteka</h4>
+            <p>Brezplačen pregled mehanizma (20 min) — vidite manjkajoči mehanizem vaše ponudbe — če se sklada, načrtujemo obseg. Brez pritiska, brez obveznosti. Odgovorim v 24 urah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section id="contact" class="cta-final" aria-labelledby="contact-heading">
+      <div class="container cta-final__inner">
+        <h2 id="contact-heading">pogovorimo se</h2>
+        <p>Rezervirajte 20-minutni pregled mehanizma. Pokažem vam manjkajoči mehanizem vaše ponudbe — odločitev je vaša.</p>
+
+        <form id="contact-form" action="https://formspree.io/f/meajawlq" method="POST" novalidate>
+          <div class="form-field">
+            <label for="name">Ime</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Vaše ime" />
+          </div>
+          <div class="form-field">
+            <label for="email">E-pošta</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="ime@podjetje.si" />
+          </div>
+          <div class="form-field">
+            <label for="project">Podrobnosti projekta</label>
+            <textarea id="project" name="project" required placeholder="Kaj poženete? Kdaj? Okvirna cena?" aria-describedby="form-msg"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" id="form-submit" style="margin-top: var(--space-4);">Pošlji povzetek projekta</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          <p class="microcopy">brez spama. odgovorim v 24 urah.</p>
+        </form>
+
+        <p style="margin-top: var(--space-8); font-size: var(--text-sm); color: var(--color-mute);">ali pišite direktno: <a href="mailto:frank@ivofrank.com" style="color: var(--color-amber-dark); font-weight: 600;">frank@ivofrank.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="eyebrow" style="color: var(--color-amber);">kontakt</p>
+      <a href="mailto:frank@ivofrank.com" class="footer__email">frank@ivofrank.com</a>
+      <nav class="footer__links" aria-label="Noga">
+        <a href="https://ivofrank.com" rel="noopener">ivofrank.com</a>
+        <a href="/privacy.html">zasebnost</a>
+      </nav>
+      <p class="footer__legal">© 2026 Ivo Frank · ivofrank.com</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ---------- SMOOTH SCROLL ---------- */
+      document.querySelectorAll("[data-scroll]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var target = document.querySelector(btn.getAttribute("data-scroll"));
+          if (target) { target.scrollIntoView({ behavior: "smooth", block: "start" }); target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true }); }
+        });
+      });
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          var id = a.getAttribute("href");
+          if (id === "#" || id.length < 2) return;
+          var target = document.querySelector(id);
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true }); }
+        });
+      });
+
+      /* ---------- KONTAKTNI OBRAZEC ---------- */
+      var form = document.getElementById("contact-form");
+      var msg = document.getElementById("form-msg");
+      var submitBtn = document.getElementById("form-submit");
+      var toast = document.getElementById("toast");
+      var FORM_ENDPOINT = "https://formspree.io/f/meajawlq";
+
+      function showToast(text, type) {
+        toast.textContent = text;
+        toast.className = "toast" + (type ? " toast--" + type : "") + " is-visible";
+        setTimeout(function () { toast.classList.remove("is-visible"); }, 4000);
+      }
+      function setMsg(text, type) {
+        msg.textContent = text;
+        msg.className = "form-msg" + (type ? " form-msg--" + type : "");
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var project = document.getElementById("project").value.trim();
+
+        if (!name || !email || !project) {
+          setMsg("Izpolnite vsa polja.", "error");
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          document.getElementById("email").setAttribute("aria-invalid", "true");
+          setMsg("Vnesite veljaven e-poštni naslov.", "error");
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Pošiljam ...";
+        setMsg("", "");
+
+        fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { "Accept": "application/json", "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name, email: email, project: project, source: "portfolio-page" })
+        })
+          .then(function (res) { if (!res.ok) throw new Error("err"); return res.json().catch(function () { return {}; }); })
+          .then(function () {
+            setMsg("Hvala — povzetek pregledam in odgovorim v 24 urah.", "success");
+            showToast("Povzetek poslan ✓", "success");
+            form.reset();
+          })
+          .catch(function () {
+            setMsg("Napaka. Pišite direktno na frank@ivofrank.com.", "error");
+            showToast("Pišite direktno na frank@ivofrank.com", "error");
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Pošlji povzetek projekta";
+          });
+      });
+
+      document.getElementById("email").addEventListener("input", function () {
+        if (this.getAttribute("aria-invalid") === "true") {
+          this.setAttribute("aria-invalid", "false");
+          setMsg("", "");
+        }
+      });
+      document.getElementById("name").addEventListener("input", function () {
+        if (this.getAttribute("aria-invalid") === "true") {
+          this.setAttribute("aria-invalid", "false");
+          setMsg("", "");
+        }
+      });
+      document.getElementById("project").addEventListener("input", function () {
+        if (this.getAttribute("aria-invalid") === "true") {
+          this.setAttribute("aria-invalid", "false");
+          setMsg("", "");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
