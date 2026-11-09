@@ -279,8 +279,47 @@
       margin-bottom: var(--space-4); line-height: var(--leading-snug);
     }
     .piece__label { font-family: var(--font-mono); font-weight: 600; color: var(--color-amber-dark); }
-    .piece-link { display: inline-block; font-weight: 600; color: var(--color-amber-dark); text-decoration: none; }
-    .piece-link:hover { text-decoration: underline; }
+    /* Updated Piece Button */
+    .piece-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      min-height: 44px;
+      padding: var(--space-2) var(--space-5);
+      border: 1.5px solid var(--color-ink);
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--color-ink);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      margin-top: var(--space-2);
+    }
+
+    .piece-btn:hover,
+    .piece-btn:focus-visible {
+      background: var(--color-ink);
+      color: var(--color-white);
+      transform: translateY(-1px);
+    }
+
+    .piece-btn:active {
+      transform: translateY(1px);
+    }
+
+    /* Subtle micro-animation on the arrow */
+    .piece-btn span {
+      display: inline-block;
+      transition: transform 0.15s ease;
+    }
+
+    .piece-btn:hover span {
+      transform: translateX(3px);
+    }
+
 
     /* How I Work */
     .how-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-8); }
@@ -399,7 +438,7 @@
           <strong>Izdelano:</strong> VSL scenarij v 6 delih + lead-gen posvet 60–90 min.</p>
           
           <p class="piece__quote">"Strah pač ostane. Sedi namreč v dlani, ki bi rada potrkala."</p>
-          <a href="https://flat-sodium-9d4.notion.site/Lumar-monta-na-hi-a-VSL-scenarij-Potrkajte-6-min-govora-413996240a668053983bd5520e6fe808?pvs=74" class="piece-link" data-notion="01_LUMAR" target="_blank" rel="noopener">oglejte si →</a>
+          <a href="https://flat-sodium-9d4.notion.site/Lumar-monta-na-hi-a-VSL-scenarij-Potrkajte-6-min-govora-413996240a668053983bd5520e6fe808?pvs=74" class="piece-btn" data-notion="01_LUMAR" target="_blank" rel="noopener">oglejte si <span>→</span></a>
         </article>
         <article class="piece" id="piece-lunos-e260">
           <h3 class="piece__title">Lunos e²60 – booking stran za ogled z meritvijo vlage (B2C)</h3>
@@ -409,7 +448,7 @@
           <strong>Izdelano:</strong> Booking funnel ~544 besed + pravna mikrotekst. Lead-gen: brezplačen ogled z meritvijo vlage.</p>
           
           <p class="piece__quote">"Ali bo plesen izginila? Tega ne obljubljamo."</p>
-          <a href="https://flat-sodium-9d4.notion.site/Lunos-e-60-booking-stran-za-ogled-z-meritvijo-vlage-B2C-413996240a668096a682d8f0b4bd8a5f?pvs=74" class="piece-link" data-notion="02_LUNOS" target="_blank" rel="noopener">oglejte si →</a>
+          <a href="https://flat-sodium-9d4.notion.site/Lunos-e-60-booking-stran-za-ogled-z-meritvijo-vlage-B2C-413996240a668096a682d8f0b4bd8a5f?pvs=74" class="piece-btn" data-notion="02_LUNOS" target="_blank" rel="noopener">oglejte si <span>→</span></a>
         </article>
         <article class="piece" id="piece-navimow-i105e">
           <h3 class="piece__title">Segway Navimow i105E – dolga prodajna stran, 8 sekcij (demo, [TEST])</h3>
@@ -419,7 +458,7 @@
           <strong>Izdelano:</strong> Prodajna stran ~1.445 besed. 30-dnevni preizkus doma [TEST], brezplačna namestitev in risanje mape do 31. 3. 2027 [TEST], cela Slovenija [TEST].</p>
           <p class="piece__detail"><span class="piece__label">RAZKRITJE:</span> demo projekt – vse oznake [TEST] ostajajo vidne.</p>
           <p class="piece__quote">"Sobota je spet vaša. Trato pokosi robot. Anteno in mapo vrta uredimo mi [TEST]."</p>
-          <a href="https://flat-sodium-9d4.notion.site/Segway-Navimow-i105E-dolga-prodajna-stran-8-sekcij-demo-TEST-413996240a66802da2cbead771f0b1b2?pvs=74" class="piece-link" data-notion="03_NAVIMOW" target="_blank" rel="noopener">oglejte si →</a>
+          <a href="https://flat-sodium-9d4.notion.site/Segway-Navimow-i105E-dolga-prodajna-stran-8-sekcij-demo-TEST-413996240a66802da2cbead771f0b1b2?pvs=74" class="piece-btn" data-notion="03_NAVIMOW" target="_blank" rel="noopener">oglejte si <span>→</span></a>
         </article>
         <article class="piece" id="piece-daikin-3r">
           <h3 class="piece__title">Daikin Altherma 3 R – 5-dnevna e-poštna sekvenca (lead-gen za izvajalca)</h3>
@@ -429,7 +468,7 @@
           <strong>Izdelano:</strong> 5-dnevna email sekvenca. Mehek CTA v e-poštah 1–4, trdi v 5.</p>
           
           <p class="piece__quote">"Daikin Altherma 3 R ničesar ne kuri. Toploto jemlje iz zraka."</p>
-          <a href="https://flat-sodium-9d4.notion.site/Daikin-Altherma-3-R-5-dnevna-e-po-tna-sekvenca-lead-gen-za-izvajalca-413996240a668073acf2e1316e346598?pvs=74" class="piece-link" data-notion="04_DAIKIN" target="_blank" rel="noopener">oglejte si →</a>
+          <a href="https://flat-sodium-9d4.notion.site/Daikin-Altherma-3-R-5-dnevna-e-po-tna-sekvenca-lead-gen-za-izvajalca-413996240a668073acf2e1316e346598?pvs=74" class="piece-btn" data-notion="04_DAIKIN" target="_blank" rel="noopener">oglejte si <span>→</span></a>
         </article>
         <article class="piece" id="piece-healthyworld-magnezij">
           <h3 class="piece__title">HealthyWorld® Magnezij 165 mg – Meta oglas (Facebook / Instagram)</h3>
@@ -439,7 +478,7 @@
           <strong>Izdelano:</strong> 1 varianta oglasa – naslov 15 besed, primarno besedilo 116 besed, gumb 3 besede.</p>
           
           <p class="piece__quote">"Služba, trgovina, kuhanje. Seznam se do večera ne skrajša."</p>
-          <a href="https://flat-sodium-9d4.notion.site/HealthyWorld-Magnezij-165-mg-Meta-oglas-Facebook-Instagram-413996240a668025860ac436c69a9dcb?pvs=74" class="piece-link" data-notion="05_HEALTHYWORLD" target="_blank" rel="noopener">oglejte si →</a>
+          <a href="https://flat-sodium-9d4.notion.site/HealthyWorld-Magnezij-165-mg-Meta-oglas-Facebook-Instagram-413996240a668025860ac436c69a9dcb?pvs=74" class="piece-btn" data-notion="05_HEALTHYWORLD" target="_blank" rel="noopener">oglejte si <span>→</span></a>
         </article>
       </div>
     </section>
