@@ -169,6 +169,11 @@
       background: var(--color-amber-dark);
     }
 
+    .hero__highlight {
+      color: var(--color-amber-dark);
+      font-weight: 600;
+    }
+
     .hero h1 {
       font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
       line-height: 1.15;
@@ -371,9 +376,9 @@
         <p>Odidete z manjkajočim mehanizmom svoje ponudbe – s konkretno točko, ki spremeni "zanimivo" v "kupim".</p>
       </div>
 
-      <button type="button" class="btn btn--primary" data-scroll="#contact" aria-label="Poišči obrazec za brezplačen pregled mehanizma">
+      <a href="#contact" class="btn btn--primary" aria-label="Poišči obrazec za brezplačen pregled mehanizma">
         Najdite manjkajoči mehanizem svoje ponudbe (20 min, brezplačno)
-      </button>
+      </a>
 
       <p class="hero__micro">brez spama · odgovor v 24 urah</p>
     </div>
@@ -494,6 +499,7 @@
 
         <div style="margin-top: var(--space-10); max-width: 100%; margin-inline: auto;">
           <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">kako izgleda preverjena trditev</h3>
+          <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
           <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
             <thead>
               <tr>
@@ -540,6 +546,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
           <p style="font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-3);">Ena trditev, preden pride v besedilo. Kar nima vira, ne pride na stran.</p>
         </div>
 
@@ -604,15 +611,19 @@
         <form id="contact-form" action="https://formspree.io/f/xvkkjgpp" method="POST" novalidate>
           <div class="form-field">
             <label for="name">Ime</label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Vaše ime" />
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Vaše ime" aria-describedby="form-msg" />
           </div>
           <div class="form-field">
             <label for="email">E-pošta</label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="ime@podjetje.si" />
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="ime@podjetje.si" aria-describedby="form-msg" />
           </div>
           <div class="form-field">
-            <label for="project">Podrobnosti projekta</label>
-            <textarea id="project" name="project" required placeholder="Kakšen projekt pripravljate? Kdaj? Okvirna cena?" aria-describedby="form-msg"></textarea>
+            <label for="website">Spletna stran ali povezava do ponudbe</label>
+            <input type="url" id="website" name="website" required placeholder="https://vase-stran.si ali povezava do ponudbe" aria-describedby="form-msg" />
+          </div>
+          <div class="form-field">
+            <label for="project">Podrobnosti projekta (neobvezno)</label>
+            <textarea id="project" name="project" placeholder="Kaj poženete? Kdaj? Kakšen problem rešujete?" aria-describedby="form-msg"></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--block" id="form-submit" style="margin-top: var(--space-4);">Pošlji povzetek projekta</button>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
@@ -680,9 +691,13 @@
         e.preventDefault();
         var name = document.getElementById("name").value.trim();
         var email = document.getElementById("email").value.trim();
+        var website = document.getElementById("website").value.trim();
         var project = document.getElementById("project").value.trim();
 
-        if (!name || !email || !project) {
+        if (!name || !email || !website) {
+          if (!name) document.getElementById("name").setAttribute("aria-invalid", "true");
+          if (!email) document.getElementById("email").setAttribute("aria-invalid", "true");
+          if (!website) document.getElementById("website").setAttribute("aria-invalid", "true");
           setMsg("Izpolnite vsa polja.", "error");
           return;
         }
@@ -699,7 +714,7 @@
         fetch(FORM_ENDPOINT, {
           method: "POST",
           headers: { "Accept": "application/json", "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, email: email, project: project, source: "portfolio-page" })
+          body: JSON.stringify({ name: name, email: email, website: website, project: project, source: "portfolio-page" })
         })
           .then(function (res) { if (!res.ok) throw new Error("err"); return res.json().catch(function () { return {}; }); })
           .then(function () {
@@ -730,6 +745,12 @@
         }
       });
       document.getElementById("project").addEventListener("input", function () {
+        if (this.getAttribute("aria-invalid") === "true") {
+          this.setAttribute("aria-invalid", "false");
+          setMsg("", "");
+        }
+      });
+      document.getElementById("website").addEventListener("input", function () {
         if (this.getAttribute("aria-invalid") === "true") {
           this.setAttribute("aria-invalid", "false");
           setMsg("", "");
