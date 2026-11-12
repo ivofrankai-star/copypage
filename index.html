@@ -391,6 +391,26 @@
     .plain-list { padding-left: var(--space-6); margin-top: var(--space-4); }
     .plain-list li { margin-bottom: var(--space-2); color: var(--color-ink-soft); }
     .section .lead + .lead { margin-top: var(--space-3); }
+    /* ---- layout polish ---- */
+    .bg-white { background: var(--color-white); }
+    .section h2 + p, .section h2 + div, .section h2 + ul { margin-top: var(--space-5); }
+    .section .lead { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+    .pull { border-left: 3px solid var(--color-amber); padding-left: var(--space-5); margin-top: var(--space-8);
+            font-size: var(--text-xl); font-weight: 700; line-height: var(--leading-tight); color: var(--color-ink) !important; }
+    .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
+    .proof-card { background: var(--color-paper); border: 1px solid var(--color-border); border-top: 3px solid var(--color-amber); border-radius: var(--radius); padding: var(--space-5); }
+    .proof-card__brand { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-amber-dark) !important; font-weight: 600; }
+    .proof-card p + p { margin-top: var(--space-2); color: var(--color-ink) !important; }
+    .table-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-2) var(--space-4) var(--space-4); margin-top: var(--space-6); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .about-card { background: var(--color-white); border: 1px solid var(--color-border); border-left: 3px solid var(--color-amber); border-radius: var(--radius); padding: var(--space-6); }
+    .about-card .about__lead { font-size: var(--text-lg); font-weight: 700; color: var(--color-ink) !important; line-height: var(--leading-tight); }
+    .about-card p + p { margin-top: var(--space-3); }
+    .list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); margin-top: var(--space-6); }
+    .list-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6); }
+    .list-card h3 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+    .list-card ul + ul { margin-top: 0; }
+    .price-box { display: inline-block; margin-top: var(--space-6); padding: var(--space-4) var(--space-6); background: var(--color-amber-light); border: 1px solid var(--color-amber); border-radius: var(--radius); font-weight: 700; color: var(--color-ink) !important; }
+    .cta-final .microcopy { font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-3); }
   </style>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -431,38 +451,41 @@
 
   <main id="main">
     <!-- ============ TEZAVA ============ -->
-    <section id="problem" class="section" aria-labelledby="problem-heading">
+    <section id="problem" class="section bg-white" aria-labelledby="problem-heading">
       <div class="container prose-narrow">
+        <p class="eyebrow">težava</p>
         <h2 id="problem-heading">Zakaj več oglasov ne prinese več povpraševanj</h2>
         <p class="lead">Agencija pravi: več oglaševanja. Več oglasov pa pripelje več ljudi do istega dvoma.</p>
         <p class="lead">Kdor kupuje hišo, napravo, storitev ali program, se ne odloči v enem večeru. Dolgo premišljuje in ima močne ugovore.</p>
         <p class="lead">Stran mu da pridevnike in obljube, on pa odločitev prestavi na jutri. In jutri na naslednji teden.</p>
-        <p class="lead"><strong>Kupca prepriča samo tisto, kar lahko na strani preveri sam.</strong></p>
+        <p class="pull">Kupca prepriča samo tisto, kar lahko na strani preveri sam.</p>
       </div>
     </section>
 
     <!-- ============ DOKAZ ============ -->
-    <section id="proof" class="section trust" aria-labelledby="proof-heading">
+    <section id="proof" class="section" aria-labelledby="proof-heading">
       <div class="container prose-narrow">
+        <p class="eyebrow">dokaz</p>
         <h2 id="proof-heading">Dokaz, ki ga kupec preveri sam</h2>
         <p class="lead">Oglasi in prenova niso bili napaka. Imate izdelek ali storitev in imate obisk. Manjka ena točka, ki spremeni »zanimivo« v »kupim«.</p>
         <p class="lead">Pri mojih besedilih je ta točka enkrat stena vzorčne hiše, drugič meritev vlage ali fotografija iz kurilnice. Besedilo jo postavi na prvo mesto, pred vse pridevnike.</p>
-        <ul class="plain-list">
-          <li><strong>Lunos:</strong> kupec najprej dobi meritev vlage, šele nato predlog. Če je vzrok drugje, izve tudi to.</li>
-          <li><strong>Daikin:</strong> odgovor o višji spodbudi lastnik najde v svoji kurilnici.</li>
-          <li><strong>HealthyWorld:</strong> oglas o magneziju ne reče nič več, kot dovoljuje EU.</li>
-          <li><strong>Navimow:</strong> stran sama pove, da kosilnica pri dvignjenih robovih pusti nepokošen pas.</li>
-        </ul>
-        <p class="lead">Na vaši ponudbi delam enako. Kar kupec lahko preveri, gre na vrh strani. Kar nima vira, ne pride na stran.</p>
+        <div class="proof-grid">
+          <div class="proof-card"><p class="proof-card__brand">Lunos</p><p>kupec najprej dobi meritev vlage, šele nato predlog. Če je vzrok drugje, izve tudi to.</p></div>
+          <div class="proof-card"><p class="proof-card__brand">Daikin</p><p>odgovor o višji spodbudi lastnik najde v svoji kurilnici.</p></div>
+          <div class="proof-card"><p class="proof-card__brand">HealthyWorld</p><p>oglas o magneziju ne reče nič več, kot dovoljuje EU.</p></div>
+          <div class="proof-card"><p class="proof-card__brand">Navimow</p><p>stran sama pove, da kosilnica pri dvignjenih robovih pusti nepokošen pas.</p></div>
+        </div>
+        <p class="lead" style="margin-top: var(--space-6);">Na vaši ponudbi delam enako. Kar kupec lahko preveri, gre na vrh strani. Kar nima vira, ne pride na stran.</p>
       </div>
     </section>
 
     <!-- ============ PREVERJENA TRDITEV ============ -->
-    <section id="claims" class="section" aria-labelledby="claims-heading">
+    <section id="claims" class="section bg-white" aria-labelledby="claims-heading">
       <div class="container prose-narrow">
+        <p class="eyebrow">preverjanje</p>
         <h2 id="claims-heading">Takole je videti trditev, preden pride v besedilo</h2>
         <p class="lead">Preden začnem pisati, ob vsako številko in obljubo zapišem, od kod je in kateri dan sem jo preveril. Kar ne zdrži, gre ven.</p>
-        <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: var(--space-6);">
+        <div class="table-card">
           <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
             <thead>
               <tr>
@@ -510,7 +533,7 @@
             </tbody>
           </table>
         </div>
-        <p class="lead" style="margin-top: var(--space-4);">Poglejte peto vrstico. Tudi obljubo, da vam bom dvignil konverzije, sem izločil. Zanjo nimam ne vira ne meritve.</p>
+        <p class="lead" style="margin-top: var(--space-6);">Poglejte peto vrstico. Tudi obljubo, da vam bom dvignil konverzije, sem izločil. Zanjo nimam ne vira ne meritve.</p>
         <blockquote style="border-left: 3px solid var(--color-amber); padding-left: var(--space-4); font-style: italic; color: var(--color-ink); margin-top: var(--space-4);">Izmišljene številke so laž. Resnične lahko preverite.</blockquote>
         <div class="section-cta"><a href="#contact" class="btn btn--primary">Pošljite povezavo do svoje strani za brezplačni pregled</a></div>
       </div>
@@ -566,12 +589,13 @@
     </section>
 
     <!-- ============ KDO PISE ============ -->
-    <section id="about" class="section trust" aria-labelledby="about-heading">
+    <section id="about" class="section bg-white" aria-labelledby="about-heading">
       <div class="container prose-narrow">
+        <p class="eyebrow">o meni</p>
         <h2 id="about-heading">Kdo piše</h2>
         <div class="about">
-          <div class="about__text">
-            <p><strong>V moje besedilo ne pride številka brez vira, zato vas pred kupcem nobena trditev ne spravi v zadrego.</strong></p>
+          <div class="about__text about-card">
+            <p class="about__lead">V moje besedilo ne pride številka brez vira, zato vas pred kupcem nobena trditev ne spravi v zadrego.</p>
             <p>Sem Ivo Frank. Pisanja prodajnih besedil se učim tri leta, umetne inteligence zadnji dve, in iz obojega sem zgradil svoj sistem. Delam z umetno inteligenco.</p>
           </div>
         </div>
@@ -639,20 +663,23 @@
     </section>
 
     <!-- ============ KOMU PISEM ============ -->
-    <section id="trust" class="section trust" aria-labelledby="trust-heading">
+    <section id="trust" class="section bg-white" aria-labelledby="trust-heading">
       <div class="container prose-narrow">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6);">
-          <div>
-            <h2 id="trust-heading" style="font-size: var(--text-xl);">Komu pišem in komu ne</h2>
+        <p class="eyebrow">za koga</p>
+        <h2 id="trust-heading">Komu pišem in komu ne</h2>
+        <div class="list-grid">
+          <div class="list-card">
             <ul class="positive-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Prodajate nekaj dražjega, kupec dolgo premišljuje in ima veliko pomislekov. Za take ponudbe pišem.</li>
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Odgovarjate upravi in si ne morete privoščiti trditve, ki ne zdrži? Vsaka številka ima vir.</li>
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Imate besedila, prevedena iz angleščine, ki se tudi tako berejo? Pišem samo v slovenščini, zato besedilo od prvega stavka nastaja za slovenskega kupca.</li>
+            </ul>
+            <ul class="negative-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Iščete nekoga, ki bo vodil še oglase in SEO? Potem nisem prava izbira.</li>
             </ul>
           </div>
-          <div>
-            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Česa pri meni nikoli ne dobite</h3>
+          <div class="list-card">
+            <h3>Česa pri meni nikoli ne dobite</h3>
             <ul class="negative-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Izmišljenih številk ali pričevanj.</li>
               <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Umetne omejitve in lažne nujnosti.</li>
@@ -669,7 +696,7 @@
       <div class="container cta-final__inner">
         <h2 id="contact-heading">Kako začneva</h2>
         <p>Prvi korak je brezplačen pregled, 20 minut. V obrazec spodaj vpišete povezavo do strani ali ponudbe, odgovor dobite v 24 urah. Na pregledu vidite, kje je v vaši ponudbi dokaz, ki ga kupec preveri sam. Če se odločite za sodelovanje, skupaj načrtujeva obseg.</p>
-        <p class="price-note">Prodajna stran stane od 600 € brez DDV. Točno ceno dobite po brezplačnem pregledu.</p>
+        <p class="price-box">Prodajna stran stane od 600 € brez DDV. Točno ceno dobite po brezplačnem pregledu.</p>
         <p style="margin-top: var(--space-3);">Brez pritiska. Odločitev je vaša.</p>
 
         <form id="contact-form" action="https://formspree.io/f/xvkkjgpp" method="POST" novalidate>
