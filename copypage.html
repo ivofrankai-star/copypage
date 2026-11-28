@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kupec verjame tistemu, kar preveri sam. Prodajna besedila za slovenski trg, vsaka številka z virom. Brezplačni 20-minutni pregled.">
+  <meta name="description" content="Ob vsaki številki vir in datum, trditev brez vira ostane zunaj. Prodajna stran od 600 € brez DDV. Pošljite povezavo za brezplačni 20-minutni pregled.">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://www.ivofrank.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sl_SI">
   <meta property="og:url" content="https://www.ivofrank.com/">
-  <meta property="og:title" content="Ivo Frank | Prodajna besedila za slovenski trg">
-  <meta property="og:description" content="Kupec verjame tistemu, kar preveri sam. Prodajna besedila za slovenski trg, vsaka številka z virom. Brezplačni 20-minutni pregled.">
+  <meta property="og:title" content="Copywriter Slovenija: prodajna besedila z viri | Ivo Frank">
+  <meta property="og:description" content="Ob vsaki številki vir in datum, trditev brez vira ostane zunaj. Prodajna stran od 600 € brez DDV. Pošljite povezavo za brezplačni 20-minutni pregled.">
   <meta property="og:image" content="https://www.ivofrank.com/Ivo-LOGO.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/png" href="favicon.png">
-  <title>Ivo Frank | Prodajna besedila za slovenski trg</title>
+  <title>Copywriter Slovenija: prodajna besedila z viri | Ivo Frank</title>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.ivofrank.com/#ivo", "name": "Ivo Frank", "jobTitle": "Copywriter", "email": "mailto:ivo@ivofrank.com", "telephone": "+38669650553", "url": "https://www.ivofrank.com/"}, {"@type": "ProfessionalService", "name": "Ivo Frank, prodajna besedila za slovenski trg", "url": "https://www.ivofrank.com/", "email": "ivo@ivofrank.com", "telephone": "+38669650553", "founder": {"@id": "https://www.ivofrank.com/#ivo"}, "areaServed": "SI", "availableLanguage": "sl"}]}</script>
   <style>
     /* =========================================================
        DESIGN TOKENS
@@ -422,6 +423,16 @@
     .hero h1 { font-size: clamp(var(--text-3xl), 7vw, var(--text-5xl)); }
     .section h2, .cta-final h2 { font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl)); line-height: var(--leading-tight); }
     .cta-final .microcopy { font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-3); }
+
+    /* ---- 2026-11-28 homepage v4 ---- */
+    .piece__label { margin-right: var(--space-1); }
+    .piece__src { font-size: var(--text-sm); color: var(--color-ink-soft); margin-bottom: var(--space-3); }
+    .piece__note { font-size: var(--text-base); color: var(--color-ink); font-weight: 600; margin-bottom: var(--space-3); }
+    .src-link { color: var(--color-amber-dark); font-weight: 600; }
+    .core-list { list-style: none; padding: 0; margin-top: var(--space-6); }
+    .core-list li { position: relative; padding: var(--space-2) 0 var(--space-2) var(--space-6); color: var(--color-ink-soft); font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+    .core-list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-amber-dark); font-weight: 700; }
+    .section h3 { font-size: var(--text-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); }
   </style>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -438,23 +449,12 @@
   <!-- ============ HERO ============ -->
   <header class="hero" role="banner">
     <div class="container hero__inner">
-
-      <div class="hero__meta">
-        Ivo Frank · Prodajna besedila za slovenski trg
-      </div>
-
-      <h1>Ob 23.00 še gledate analitiko.</h1>
-
-      <p class="hero__sub">Klikov je dovolj, povpraševanj skoraj ni, čeprav ste povečali proračun in prenovili stran.</p>
-      <p class="hero__sub">Vaš kupec verjame le tistemu, kar preveri sam. Vsako prodajno besedilo postavim na en tak dokaz. Vi pa v poročilu o virih vidite, od kod je vsaka številka v besedilu.</p>
-      <p class="hero__sub">Za prikaz sem napisal scenarij o montažni hiši Lumar. Kupec v njem potrka na steno vzorčne hiše in dvojno oblogo preveri z lastno roko, zato mu ni treba verjeti na besedo.</p>
-
-      <div class="hero__offer-card">
-        <strong>Brezplačni 20-minutni pregled</strong>
-        <p>Pošljete povezavo do svoje strani in v 24 urah vam odgovorim s predlogom termina. Potem se dobiva na videoklicu. Če se odločite za sodelovanje, se skupaj dogovoriva, kaj vse bom napisal. Prodajna stran stane od 600 € brez DDV, točno ceno dobite po pregledu.</p>
-      </div>
-
-      <a href="#contact" class="btn btn--primary">Pošljite povezavo in pokažem vam, kje je dokaz v vaši ponudbi</a>
+      <div class="hero__meta">Ivo Frank · Prodajna besedila za slovenski trg</div>
+      <h1>Ob vsaki številki v vašem besedilu vir in datum</h1>
+      <p class="hero__sub">Ob 23.00 še gledate analitiko. Klikov je dovolj, povpraševanj skoraj ni, čeprav ste povečali proračun in prenovili stran. Ljudje pridejo, preberejo in odločitev prestavijo na jutri. Vaš kupec verjame le tistemu, kar preveri sam.</p>
+      <p class="hero__sub">Besedilo za vašo ponudbo sestavim iz dejstev z virom, trditve brez vira pa ne dam vanj. Tako lahko stojite za vsako vrstico, tudi ko jo kdo preveri. Sem Ivo Frank, copywriter v Sloveniji.</p>
+      <a href="#contact" class="btn btn--primary">Pošljite povezavo do svoje strani za brezplačni 20-minutni pregled</a>
+      <p class="hero__micro">Spodaj je pet besedil za prikaz, vsako z virom.</p>
     </div>
   </header>
 
@@ -464,231 +464,116 @@
       <div class="container prose-narrow">
         <p class="eyebrow">težava</p>
         <h2 id="problem-heading">Zakaj več oglasov ne prinese več povpraševanj</h2>
-        <p class="lead">Agencija pravi: več oglaševanja. Več oglasov pa pripelje več ljudi do istega dvoma.</p>
-        <p class="lead">Kdor kupuje hišo, napravo, storitev ali program, se ne odloči v enem večeru. Dolgo premišljuje in ima tehtne pomisleke.</p>
-        <p class="lead">Stran mu da pridevnike in obljube, on pa odločitev prestavi na jutri. In jutri na naslednji teden.</p>
-        <p class="lead">Oglasi in prenova niso bili napaka. Imate izdelek ali storitev in ljudje prihajajo na vašo stran. Manjka ena stvar, ki spremeni »zanimivo« v »kupim«.</p>
+        <p class="lead">Agencija pravi: več oglaševanja. Več oglasov pa pripelje več ljudi do istega dvoma. Kdor kupuje hišo, napravo, storitev ali program, se ne odloči v enem večeru. Dolgo premišljuje in ima tehtne pomisleke.</p>
+        <p class="lead">Takega kupca pridevniki ne prepričajo. Solastnik slovenskega proizvodnega podjetja je na <a href="https://slo-tech.com/forum/t709834/p5686821" class="src-link" target="_blank" rel="noopener">forumu Slo-Tech</a> zapisal, da bo na spletni strani njegovega podjetja besedila le toliko, »da se pove bistvo brez nekih flancanj o tradiciji, nakladanju o presežkih« (25. 10. 2017).</p>
+        <p class="lead">Morda ste besedilo že dali pisati po znakih ali ga v naglici sestavili z umetno inteligenco. Kar ste dobili, bi lahko stalo na strani kogarkoli: napisano po istem kopitu ali kot prevod iz angleščine, z dejstvi, ki jih ni nihče preveril. Sami veste, kaj si mislite, ko tak tekst preberete na tuji strani: če varčujejo pri besedilu, morda varčujejo tudi pri izdelku.</p>
+        <p class="lead">Še slabše je besedilo, ki zveni dobro, dokler ga kdo ne preveri. Številka brez vira ali garancija brez pogoja. Ko kupec ugotovi, da taka trditev ne drži, ne pade le en stavek. Z njim pade zaupanje v vse, kar stoji okoli njega.</p>
+        <p class="lead">Če ljudje na vašo stran prihajajo, oglasi in prenova morda sploh niso bili napaka. Morda manjka besedilo, v katerem ima vsako dejstvo vir.</p>
       </div>
     </section>
 
-    <!-- ============ DOKAZ ============ -->
-    <section id="proof" class="section" aria-labelledby="proof-heading">
+    <!-- ============ KAKO PISEM ============ -->
+    <section id="method" class="section" aria-labelledby="method-heading">
       <div class="container prose-narrow">
-        <p class="eyebrow">dokaz</p>
-        <h2 id="proof-heading">Dokaz, ki ga kupec preveri sam</h2>
-        <p class="lead">Pri mojih besedilih je ta dokaz enkrat meritev vlage, drugič fotografija iz kurilnice, tretjič stran, ki sama prizna mejo izdelka. Besedilo ga postavi na prvo mesto, pred vse pridevnike.</p>
-        <p class="lead" style="margin-top: var(--space-6);">Pri vaši ponudbi delam enako. Poiščem tak dokaz, trditve brez vira pa v besedilo ne dam.</p>
-      </div>
-    </section>
-
-    <!-- ============ PREVERJENA TRDITEV ============ -->
-    <section id="claims" class="section bg-white" aria-labelledby="claims-heading">
-      <div class="container prose-narrow">
-        <p class="eyebrow">preverjanje</p>
-        <h2 id="claims-heading">Takole je videti trditev, preden pride v besedilo</h2>
-        <p class="lead">Preden začnem pisati, moj sistem zraven vsake številke in obljube zapiše, od kod je in kdaj je bila preverjena. Trditev, ki pri tem pade, izločim. Prve štiri trditve v tabeli so iz demo besedil, ki jih najdete v portfoliu.</p>
-        <div class="table-card">
-          <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
-            <thead>
-              <tr>
-                <th style="text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 2px solid var(--color-amber-dark); color: var(--color-ink); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;">trditev</th>
-                <th style="text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 2px solid var(--color-amber-dark); color: var(--color-ink); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;">vir</th>
-                <th style="text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 2px solid var(--color-amber-dark); color: var(--color-ink); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;">status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);"><span style="display: block; font-size: var(--text-xs); color: var(--color-mute); font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px;">Lunos</span>»do 30 % priznanih stroškov, največ 300 EUR na napravo, vgrajeno v paru«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">Eko sklad 126SUB-OB26, ukrep I, stanje 5. 11. 2026</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-success); font-weight: 600;">PREVERJENO</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);"><span style="display: block; font-size: var(--text-xs); color: var(--color-mute); font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px;">HealthyWorld</span>»Magnezij prispeva k zmanjševanju utrujenosti in izčrpanosti«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">Uredba (EU) 432/2012</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-success); font-weight: 600;">PREVERJENO · edina zdravstvena trditev na oglasu</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);"><span style="display: block; font-size: var(--text-xs); color: var(--color-mute); font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px;">Lumar</span>»hiša v 4–6 mesecih, gradbeno dovoljenje 12–15 mesecev«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">RTV SLO, 20. 1. 2026, izjava direktorja Marka Lukića</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-success); font-weight: 600;">PREVERJENO · izjava, ne obljuba</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);"><span style="display: block; font-size: var(--text-xs); color: var(--color-mute); font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px;">Lumar</span>»35 let garancije«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">lumar.si, stanje 7. 11. 2026</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-success); font-weight: 600;">PREVERJENO · velja za stabilnost konstrukcije</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);">»obljuba dviga konverzij«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">brez vira in brez meritve</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-error); font-weight: 600;">IZLOČENO</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);">»pričevanje, ki ga ni«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">brez pisne privolitve</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-error); font-weight: 600;">IZLOČENO</td>
-              </tr>
-              <tr>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-ink-soft);">»številka s poteklim datumom stanja«</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-mute);">vir ne velja več</td>
-                <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-error); font-weight: 600;">IZLOČENO</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="lead" style="margin-top: var(--space-6);">Poglejte peto vrstico. Tudi obljubo, da vam bom dvignil konverzije, sem izločil. Zanjo nimam ne vira ne meritve.</p>
-        <div class="section-cta"><a href="#contact" class="btn btn--primary">Pošljite povezavo in pokažem vam, kje je dokaz v vaši ponudbi</a></div>
+        <p class="eyebrow">kako pišem</p>
+        <h2 id="method-heading">Copywriter za slovenski trg: ob vsaki številki vir in datum</h2>
+        <p class="lead">Kar vira nima, ostane zunaj, tudi če bi zvenelo dobro. Če vir trditev omeji s pogojem, pogoj ostane v istem stavku.</p>
+        <p class="pull">Primer iz besedila o montažnih hišah Lumar, ki sem ga napisal za prikaz in brez plačila: podjetje na svoji strani navaja 35 let garancije za stabilnost konstrukcije (<a href="https://www.lumar.si/o-podjetju/zakaj-smo-boljsi" class="src-link" target="_blank" rel="noopener">lumar.si</a>, stanje 27. 11. 2026). Krajše »35 let garancije« bi se lepše bralo. Kupec, ki bi to preveril na lumar.si, pa bi tam prebral nekaj drugega. Zato v besedilu ostane cel stavek, s pogojem vred.</p>
+        <ul class="core-list">
+          <li>Ko besedilo naročite, boste z njim dobili seznam virov v slovenščini, za vsako številko po eno vrstico: stavek, kot stoji v besedilu, njegov vir in datum, ko je bil preverjen.</li>
+          <li>Tudi na tej strani ne boste prebrali obljube, da vam dvignem konverzije. Zanjo nimam ne vira ne meritve.</li>
+          <li>Besede, s katerimi kupci opisujejo svoje težave, poberem s forumov, iz ocen in pritožb.</li>
+          <li>Vsako sporočilo, ki bi ga lahko enako dobro zapisal tudi vaš konkurent, izločim, preden začnem pisati. Besedilo je od prvega stavka napisano v slovenščini.</li>
+        </ul>
+        <p class="lead" style="margin-top: var(--space-6);">Ko vas bo družabnik ali kupec vprašal, od kod je kakšna številka, boste odprli seznam in mu pokazali vrstico z virom in datumom. Po datumu boste videli, katero številko je čas osvežiti.</p>
       </div>
     </section>
 
     <!-- ============ PORTFOLIO ============ -->
-    <section id="work" class="section" aria-labelledby="work-heading">
+    <section id="work" class="section bg-white" aria-labelledby="work-heading">
       <div class="container prose-narrow">
         <p class="eyebrow">portfolio</p>
-        <h2 id="work-heading">Pet besedil, vsako s svojim dokazom</h2>
-        <p style="font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-4);">Vseh pet je nastalo za prikaz, brez plačila. Pri vsakem je zraven vir.</p>
+        <h2 id="work-heading">Pet besedil za prikaz in njihovi viri</h2>
+        <p class="lead">Plačanih strank še nimam, zato pričevanj ni. Pri vsakem besedilu piše, kateri del podpira vir.</p>
+
         <article class="piece" id="piece-lumar-vsl">
-          <h3 class="piece__title">Lumar montažna hiša – scenarij za prodajni video »Potrkajte«</h3>
-          <p class="piece__problem"><strong>Težava:</strong> mlada družina se odloča med klasično in montažno gradnjo, boji pa se »kartonaste hiše«.</p>
-          <p class="piece__mechanism"><strong>Preveri sam:</strong> potrka na steno vzorčne hiše. Dvojna obloga je v standardni izvedbi.</p>
-          <p class="piece__quote">»Strah pač ostane. Sedi namreč v dlani, ki bi rada potrkala.«</p>
-          <a href="https://flat-sodium-9d4.notion.site/Lumar-monta-na-hi-a-VSL-scenarij-Potrkajte-6-min-govora-413996240a668053983bd5520e6fe808?pvs=74" class="piece-btn" data-notion="01_LUMAR" target="_blank" rel="noopener">oglejte si, kako kupec potrka na steno <span>→</span></a>
-          <p class="piece__detail"><strong>Vir:</strong> lumar.si (stanje 7. 11. 2026) in RTV SLO, 20. 1. 2026. Izjave kupcev v scenariju so izmišljene za prikaz in označene z [TEST].</p>
+          <h3 class="piece__title">Lumar, scenarij za prodajni video</h3>
+          <p class="piece__detail">nastalo za prikaz, brez plačila</p>
+          <p class="piece__quote"><span class="piece__label">Iz scenarija:</span> »Strah pač ostane. Sedi namreč v dlani, ki bi rada potrkala.«</p>
+          <p class="piece__src"><strong>Vir za čas gradnje in čakanja:</strong> lastnik in direktor podjetja Lumar Marko Lukić je 20. 1. 2026 za <a href="https://www.rtvslo.si/gospodarstvo/mi-zgradimo-hiso-v-stirih-do-sestih-mesecih-na-gradbeno-dovoljenje-pa-cakamo-od-12-do-15-mesecev/770690" class="src-link" target="_blank" rel="noopener">RTV SLO</a> izjavil: »Mi zgradimo hišo v štirih do šestih mesecih, na gradbeno dovoljenje pa čakamo od 12 do 15 mesecev.« Stanje 27. 11. 2026.</p>
+          <p class="piece__note">Scenarij to navaja kot njegovo izjavo, ne kot Lumarjevo obljubo.</p>
+          <a href="https://flat-sodium-9d4.notion.site/Lumar-monta-na-hi-a-VSL-scenarij-Potrkajte-6-min-govora-413996240a668053983bd5520e6fe808" class="piece-btn" data-notion="01_LUMAR" target="_blank" rel="noopener">preberite celotno besedilo <span>→</span></a>
         </article>
+
         <article class="piece" id="piece-lunos-e260">
-          <h3 class="piece__title">Lunos e²60 – stran, na kateri gospodinjstvo rezervira ogled z meritvijo vlage</h3>
-          <p class="piece__problem"><strong>Težava:</strong> kupec ima nova, zatesnjena okna in zatohlo spalnico, črna lisa za omaro pa se kljub beljenju vrača.</p>
-          <p class="piece__mechanism"><strong>Preveri sam:</strong> najprej dobi meritev vlage, šele nato predlog. Izmerjeno vlago primerja s priporočilom NIJZ, po katerem naj bo vlažnost 40–60 %. Če je vzrok drugje, izve tudi to.</p>
-          <p class="piece__quote">»Ali bo plesen izginila? Tega ne obljubljamo.«</p>
-          <a href="https://flat-sodium-9d4.notion.site/Lunos-e-60-booking-stran-za-ogled-z-meritvijo-vlage-B2C-413996240a668096a682d8f0b4bd8a5f?pvs=74" class="piece-btn" data-notion="02_LUNOS" target="_blank" rel="noopener">oglejte si, kako kupec vlago primerja s priporočilom NIJZ <span>→</span></a>
-          <p class="piece__detail"><strong>Vir:</strong> Eko sklad 126SUB-OB26 (stanje 5. 11. 2026) in priporočilo NIJZ.</p>
+          <h3 class="piece__title">Lunos e²60, stran za rezervacijo ogleda</h3>
+          <p class="piece__detail">nastalo za prikaz, brez plačila</p>
+          <p class="piece__quote"><span class="piece__label">S strani:</span> »Ali bo plesen izginila? Tega ne obljubljamo.«</p>
+          <p class="piece__src"><strong>Vir za priporočeno vlago:</strong> <a href="https://nijz.si/moje-okolje/plesni/" class="src-link" target="_blank" rel="noopener">NIJZ</a> priporoča vlago v prostorih med 40 % in 60 %. Stanje 27. 11. 2026.</p>
+          <p class="piece__note">Stran navaja priporočilo NIJZ, odprave plesni pa ne obljublja.</p>
+          <a href="https://flat-sodium-9d4.notion.site/Lunos-e-60-booking-stran-za-ogled-z-meritvijo-vlage-B2C-413996240a668096a682d8f0b4bd8a5f" class="piece-btn" data-notion="02_LUNOS" target="_blank" rel="noopener">preberite celotno besedilo <span>→</span></a>
         </article>
+
         <article class="piece" id="piece-navimow-i105e">
-          <h3 class="piece__title">Segway Navimow i105E – dolga prodajna stran (demo, [TEST])</h3>
-          <p class="piece__problem"><strong>Težava:</strong> kupec ima kosilnico z obodno žico, ki se lomi, obljubljenega prostega dne pa ni.</p>
-          <p class="piece__mechanism"><strong>Preveri sam:</strong> prebere neodvisni test, stran pa mu sama pove, da Navimow pri dvignjenih robovih pusti nepokošen pas.</p>
-          <p class="piece__quote">»Sobota je spet vaša. Trato pokosi robot. Anteno in mapo vrta uredimo mi [TEST].«</p>
-          <a href="https://flat-sodium-9d4.notion.site/Segway-Navimow-i105E-dolga-prodajna-stran-8-sekcij-demo-TEST-413996240a66802da2cbead771f0b1b2?pvs=74" class="piece-btn" data-notion="03_NAVIMOW" target="_blank" rel="noopener">oglejte si, kje stran sama prizna nepokošen pas <span>→</span></a>
-          <p class="piece__detail"><strong>Vir:</strong> Segway navodila in Notebookcheck, 29. 3. 2024. Operater Zelena Trata d.o.o. je izmišljen, oznake [TEST] so na strani vidne.</p>
+          <h3 class="piece__title">Segway Navimow i105E, prodajna stran</h3>
+          <p class="piece__detail">nastalo za prikaz, brez plačila</p>
+          <p class="piece__quote"><span class="piece__label">S strani:</span> »Sobota je spet vaša. Trato pokosi robot.«</p>
+          <p class="piece__src"><strong>Vir za omejitev kosilnice:</strong> pri <a href="https://www.notebookcheck.net/Navimow-i105E-in-a-practical-test-Segway-s-affordable-robotic-mower-does-without-a-boundary-wire-thanks-to-EFLS-2-0.820327.0.html" class="src-link" target="_blank" rel="noopener">Notebookchecku</a> so v testu (29. 3. 2024) zapisali, da ima kosilnica težave predvsem ob robovih, ki niso na isti višini, kar po njihovem bolj ali manj velja za vse robotske kosilnice. Stanje 27. 11. 2026.</p>
+          <p class="piece__note">Stran kupcu sama pove, da bo pas ob dvignjeni gredici ali zidu občasno pokosil ročno.</p>
+          <a href="https://flat-sodium-9d4.notion.site/Segway-Navimow-i105E-dolga-prodajna-stran-8-sekcij-demo-TEST-413996240a66802da2cbead771f0b1b2" class="piece-btn" data-notion="03_NAVIMOW" target="_blank" rel="noopener">preberite celotno besedilo <span>→</span></a>
         </article>
+
         <article class="piece" id="piece-daikin-3r">
-          <h3 class="piece__title">Daikin Altherma 3 R – 5-dnevni niz e-pošt za izvajalca</h3>
-          <p class="piece__problem"><strong>Težava:</strong> lastnik starejše hiše na kurilno olje okleva zaradi cene, subvencije, mraza in hrupa zunanje enote.</p>
-          <p class="piece__mechanism"><strong>Preveri sam:</strong> odgovor na vprašanje o spodbudi stoji v njegovi kurilnici. Fotografija še priklopljenega kotla je pogoj za višjo spodbudo.</p>
-          <p class="piece__quote">»Daikin Altherma 3 R ničesar ne kuri. Toploto jemlje iz zraka.«</p>
-          <a href="https://flat-sodium-9d4.notion.site/Daikin-Altherma-3-R-5-dnevna-e-po-tna-sekvenca-lead-gen-za-izvajalca-413996240a668073acf2e1316e346598?pvs=74" class="piece-btn" data-notion="04_DAIKIN" target="_blank" rel="noopener">oglejte si, kako lastnik odgovor najde v svoji kurilnici <span>→</span></a>
-          <p class="piece__detail"><strong>Vir:</strong> Eko sklad 126SUB-OB26 (stanje 5. 11. 2026) in proizvajalčeva dokumentacija.</p>
+          <h3 class="piece__title">Daikin Altherma 3 R, niz e-poštnih sporočil</h3>
+          <p class="piece__detail">nastalo za prikaz, brez plačila</p>
+          <p class="piece__quote"><span class="piece__label">Iz sporočil:</span> »Daikin Altherma 3 R ničesar ne kuri. Toploto jemlje iz zraka.«</p>
+          <p class="piece__src"><strong>Vir za spodbudo:</strong> javni poziv <a href="https://www.ekosklad.si/prebivalstvo/pridobite-spodbudo/seznam-spodbud/toplotne-crpalke/toplotne-crpalke-subvencija-3" class="src-link" target="_blank" rel="noopener">Eko sklada 126SUB-OB26</a> je bil 27. 11. 2026 še odprt. Višja spodbuda velja le, če je nova toplotna črpalka zamenjala staro kurilno napravo. Ta je morala biti v času zamenjave v uporabi, dajati toploto centralnemu ogrevanju stavbe in biti po zamenjavi uničena. Stanje 27. 11. 2026.</p>
+          <a href="https://flat-sodium-9d4.notion.site/Daikin-Altherma-3-R-5-dnevna-e-po-tna-sekvenca-lead-gen-za-izvajalca-413996240a668073acf2e1316e346598" class="piece-btn" data-notion="04_DAIKIN" target="_blank" rel="noopener">preberite celotno besedilo <span>→</span></a>
         </article>
+
         <article class="piece" id="piece-healthyworld-magnezij">
-          <h3 class="piece__title">HealthyWorld® Magnezij 165 mg – Meta oglas (Facebook / Instagram)</h3>
-          <p class="piece__problem"><strong>Težava:</strong> odrasel kupec tablet in kapsul ne mara.</p>
-          <p class="piece__mechanism"><strong>Preveri sam:</strong> na etiketi vidi, da 165 mg pomeni 2 gumi bonbona na dan. Prežveči ju med opravki in tablete mu ni treba pogoltniti. Oglas o zdravju ne reče nič več, kot dovoljuje EU.</p>
-          <p class="piece__quote">»Služba, trgovina, kuhanje. Seznam se do večera ne skrajša.«</p>
-          <a href="https://flat-sodium-9d4.notion.site/HealthyWorld-Magnezij-165-mg-Meta-oglas-Facebook-Instagram-413996240a668025860ac436c69a9dcb?pvs=74" class="piece-btn" data-notion="05_HEALTHYWORLD" target="_blank" rel="noopener">oglejte si, kako 2 gumi bonbona na dan zamenjata tableto <span>→</span></a>
-          <p class="piece__detail"><strong>Vir:</strong> healthyworld.si (stanje 6. 11. 2026) in Uredba (EU) 432/2012.</p>
+          <h3 class="piece__title">HealthyWorld Magnezij 165 mg, oglas za Facebook in Instagram</h3>
+          <p class="piece__detail">nastalo za prikaz, brez plačila</p>
+          <p class="piece__quote"><span class="piece__label">Iz oglasa:</span> »Služba, trgovina, kuhanje. Seznam se do večera ne skrajša.«</p>
+          <p class="piece__src"><strong>Vir za trditev o zdravju:</strong> <a href="https://nijz.si/sites/www.nijz.si/files/uploaded/mgcl_prispevek_final.pdf" class="src-link" target="_blank" rel="noopener">NIJZ</a> navaja, da Uredba (EU) 432/2012 dovoljuje trditev »magnezij prispeva k zmanjševanju utrujenosti in izčrpanosti«. Stanje 27. 11. 2026.</p>
+          <p class="piece__note">O zdravju oglas pove samo to dovoljeno trditev, nič o energiji ali spanju.</p>
+          <a href="https://flat-sodium-9d4.notion.site/HealthyWorld-Magnezij-165-mg-Meta-oglas-Facebook-Instagram-413996240a668025860ac436c69a9dcb" class="piece-btn" data-notion="05_HEALTHYWORLD" target="_blank" rel="noopener">preberite celotno besedilo <span>→</span></a>
         </article>
-        <div class="section-cta"><a href="#contact" class="btn btn--primary">Pošljite povezavo in pokažem vam, kje je dokaz v vaši ponudbi</a></div>
       </div>
     </section>
 
-    <!-- ============ KDO PISE ============ -->
-    <section id="about" class="section bg-white" aria-labelledby="about-heading">
+    <!-- ============ PREGLED IN CENA ============ -->
+    <section id="offer" class="section" aria-labelledby="offer-heading">
       <div class="container prose-narrow">
-        <p class="eyebrow">o meni</p>
-        <h2 id="about-heading">Kdo piše</h2>
-        <div class="about">
-          <div class="about__text about-card">
-            <p>Sem Ivo Frank. Pisanja prodajnih besedil se učim tri leta, umetne inteligence zadnji dve. Iz obojega sem zgradil svoj sistem in delam z umetno inteligenco. Sistem vsako trditev preveri pri njenem viru, vir in datum pa zapiše zraven.</p>
-          </div>
-        </div>
+        <p class="eyebrow">pregled in cena</p>
+        <h2 id="offer-heading">Brezplačni 20-minutni pregled in cena besedila</h2>
+        <p class="lead">Preden mi karkoli plačate, vidite, kako bi pisal o vaši ponudbi. Pošljete povezavo do strani ali ponudbe. <strong>V 24 urah vam odgovorim s predlogom termina.</strong> Nič drugega.</p>
+        <p class="lead">Nato se dobiva na 20-minutnem videoklicu. Pregledam besede in dokaz, ne SEO, hitrosti ali oblikovanja. Na klicu vam izročim PDF s poročilom in vašo celo stranjo, napisano na novo. Poročilo pove, kaj na strani že prodaja, kje se kupec ustavi in kaj bi popravil najprej.</p>
+        <p class="lead">PDF dobite na vsakem pregledu, tudi če besedila potem ne naročite. Po klicu ga v miru preberete, pokažete družabniku in se šele nato odločite. Na besedo mi torej ni treba verjeti. Tudi vi preverite sami.</p>
+        <h3>Koliko stane copywriter za prodajno stran?</h3>
+        <p class="price-box">Besedilo za prodajno stran stane od 600 € brez DDV. Cen drugih besedil, kot so niz e-poštnih sporočil, scenarij za video, oglas in stran za rezervacijo ogleda, ne objavljam. Točno ceno za vsako besedilo, tudi za prodajno stran, dobite po pregledu.</p>
+        <div class="section-cta"><a href="#contact" class="btn btn--primary">Pošljite povezavo do svoje strani za brezplačni 20-minutni pregled</a></div>
       </div>
     </section>
 
-    <!-- ============ KAKO DELAM ============ -->
-    <section id="process" class="section" aria-labelledby="process-heading">
-      <div class="container prose-narrow">
-        <p class="eyebrow">kako delam</p>
-        <h2 id="process-heading">Brez predloge: takole nastane vaše besedilo</h2>
-
-        <div class="how-grid" role="list" aria-label="5-stopenjski postopek">
-          <div class="how-col" role="listitem">
-            <p class="how-week">KORAK 1</p>
-            <p class="how-title">Raziskava</p>
-            <ul class="how-list">
-              <li>Kupčev jezik poberem iz resničnih izjav, forumov in ocen, ne iz svoje glave.</li>
-              <li>Pri Navimowu je raziskava na forumu pokazala, da obodna žica poči zaradi glodavcev ali dela na vrtu in da tega v ocenah nihče ne omeni.</li>
-              <li>Prodajna stran zato kupcu že na začetku pove, zakaj žica poči, Navimow pa kosi brez nje.</li>
-            </ul>
-          </div>
-          <div class="how-col" role="listitem">
-            <p class="how-week">KORAK 2</p>
-            <p class="how-title">Trditve pod drobnogledom</p>
-            <ul class="how-list">
-              <li>Preden napišem prvi stavek, sestavim seznam trditev, ki jih zakon ali pravila platform ne dovolijo.</li>
-              <li>Kar je na seznamu, v vašem besedilu ne bo.</li>
-            </ul>
-          </div>
-          <div class="how-col" role="listitem">
-            <p class="how-week">KORAK 3</p>
-            <p class="how-title">Pisanje</p>
-            <ul class="how-list">
-              <li>Besedilo postavim na en dokaz, ki ga kupec lahko preveri.</li>
-              <li>Če se ta dokaz ne loči dovolj od konkurence, raziskavo poglobim ali projekt opustim.</li>
-            </ul>
-          </div>
-          <div class="how-col" role="listitem">
-            <p class="how-week">KORAK 4</p>
-            <p class="how-title">Preverjanje</p>
-            <ul class="how-list">
-              <li>Ko je besedilo napisano, sistem še enkrat preveri vsako trditev, frazo in številko.</li>
-              <li>Ostane samo tisto, kar ima vir, ki še velja.</li>
-            </ul>
-          </div>
-          <div class="how-col" role="listitem">
-            <p class="how-week">KORAK 5</p>
-            <p class="how-title">Predaja</p>
-            <ul class="how-list">
-              <li>Celotno besedilo dobite v dogovorjeni obliki, zraven pa poročilo o virih.</li>
-              <li>V poročilu za Lunos je spodbuda Eko sklada navedena po stanju 5. 11. 2026.</li>
-              <li>Ko Eko sklad spremeni poziv, po datumu vidite, katera številka ne velja več.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div style="margin-top: var(--space-10);">
-          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Kaj dobite</h3>
-          <ul class="positive-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
-            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Raziskovalni povzetek, dokaz za vašega kupca in strukturo besedila.</li>
-            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Celotno besedilo: prodajno stran, niz e-pošt, scenarij za prodajni video, oglas ali stran za rezervacijo ogleda.</li>
-            <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Poročilo o virih za vsako številko. Za Lunos je bilo pregledanih več deset virov, med njimi Eko sklad in NIJZ. Ko vas kdo vpraša, od kod je neka številka, odgovor najdete v poročilu.</li>
-          </ul>
-          <p class="price-box">Prodajna stran stane od 600 € brez DDV. Za niz e-pošt, scenarij, oglas in stran za rezervacijo ogleda točno ceno dobite po brezplačnem pregledu.</p>
-          <p style="font-size: var(--text-sm); color: var(--color-mute); margin-top: var(--space-4);">Jaz napišem besedilo, vi pa poskrbite, da ga kupci vidijo. Oglasov ne vodim in SEO strategije ne pripravljam. Strani ne oblikujem in je ne postavim, e-pošte ne nastavim in naslovov za vaš seznam ne zbiram.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ KOMU PISEM ============ -->
+    <!-- ============ ZA KOGA ============ -->
     <section id="trust" class="section bg-white" aria-labelledby="trust-heading">
       <div class="container prose-narrow">
         <p class="eyebrow">za koga</p>
-        <h2 id="trust-heading">Komu pišem in komu ne</h2>
-        <div class="list-grid">
-          <div class="list-card">
-            <ul class="positive-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Prodajate nekaj dražjega, kupec dolgo premišljuje in ima veliko pomislekov. Za take ponudbe pišem.</li>
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Odgovarjate upravi in si ne morete privoščiti trditve, ki ne zdrži? Upravi pokažete poročilo o virih.</li>
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">So vaša besedila prevedena iz angleščine in se tudi tako berejo? Moja so od prvega stavka napisana v slovenščini. Presodite sami na petih besedilih zgoraj.</li>
-            </ul>
-            <ul class="negative-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Če iščete nekoga, ki bo vodil še oglase in SEO, nisem prava izbira.</li>
-            </ul>
-          </div>
-          <div class="list-card">
-            <h3>V vašem besedilu ne bo</h3>
-            <ul class="negative-list" style="list-style: none; padding: 0; font-size: var(--text-base); color: var(--color-ink-soft); line-height: var(--leading-relaxed);">
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Lažnih rokov in omejitev, ki jih v resnici ni.</li>
-              <li style="padding: var(--space-2) 0 var(--space-2) var(--space-6); position: relative;">Izmišljenih številk ali pričevanj.</li>
-            </ul>
+        <h2 id="trust-heading">Za koga pišem, česa ne delam in kakšni so pogoji</h2>
+        <h3>Kako izbrati copywriterja?</h3>
+        <p class="lead">Vprašajte ga, česa ne bo naredil, in poglejte, ali odgovori konkretno. Moj odgovor:</p>
+        <div class="list-card" style="margin-top: var(--space-6);">
+          <ul class="plain-list" style="list-style: none; padding: 0;">
+            <li><strong>Za vas pišem, če</strong> prodajate dražjo ponudbo, o kateri kupec dolgo premišljuje, in želite besedilo, ki je od prvega stavka napisano v slovenščini.</li>
+            <li><strong>Nisem prava izbira, če</strong> od mene pričakujete še oglase, SEO strategijo, oblikovanje ali postavitev strani, nastavitev e-pošte, zbiranje e-poštnih naslovov ali besedila v angleščini. Jaz napišem besedilo, vi pa poskrbite, da ga kupci vidijo.</li>
+            <li>V vašem besedilu ne bo izmišljenih številk, pričevanj ali rokov in omejitev, ki jih v resnici ni.</li>
+            <li><strong>Popravki:</strong> v ceni sta 2 kroga popravkov v dogovorjenem obsegu: popravim naslov, poudarek, dolžino ali ton. Če spremenite ponudbo, ciljnega kupca ali obseg dela, je to novo delo in ceno zanj dobite vnaprej. Podrobnosti so na <a href="/pogoji.html">strani s pogoji</a>.</li>
+          </ul>
+        </div>
+        <div class="about">
+          <div class="about__text about-card">
+            <p>Sem Ivo Frank. Pisanja prodajnih besedil se učim tri leta, umetne inteligence zadnji dve. Iz obojega sem zgradil svoj sistem.</p>
           </div>
         </div>
       </div>
@@ -697,9 +582,8 @@
     <!-- ============ KONTAKT ============ -->
     <section id="contact" class="cta-final" aria-labelledby="contact-heading">
       <div class="container cta-final__inner">
-        <h2 id="contact-heading">Kako začneva</h2>
-        <p>V obrazec spodaj vpišete ime, e-pošto in povezavo do strani ali ponudbe, podrobnosti projekta so neobvezne. Odgovor s predlogom termina dobite v 24 urah, potem se dobiva na 20-minutnem videoklicu.</p>
-
+        <h2 id="contact-heading">Pošljite povezavo do svoje strani ali ponudbe</h2>
+        <p>V obrazec vpišete ime, e-pošto in povezavo do strani ali ponudbe, podrobnosti so neobvezne. V 24 urah vam odgovorim s predlogom termina. Na klicu boste videli svojo stran, napisano na novo.</p>
         <form id="contact-form" action="https://formspree.io/f/xvkkjgpp" method="POST" novalidate>
           <div class="form-field">
             <label for="name">Ime</label>
@@ -717,12 +601,12 @@
             <label for="project">Podrobnosti projekta (neobvezno)</label>
             <textarea id="project" name="project" placeholder="Kaj prodajate in komu? Kje se zatika?" aria-describedby="form-msg"></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--block" id="form-submit" style="margin-top: var(--space-4);">Pošljite povezavo in pokažem vam, kje je dokaz v vaši ponudbi</button>
+          <button type="submit" class="btn btn--primary btn--block" id="form-submit" style="margin-top: var(--space-4);">Pošljite povezavo</button>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
-          <p class="microcopy">brezplačno · <a href="/privacy.html" style="color: inherit;">politika zasebnosti</a></p>
+          <p class="microcopy">Podatke uporabim samo za odgovor, brez novičnikov. Če do sodelovanja ne pride, sporočila izbrišem. <a href="/privacy.html" style="color: inherit;">politika zasebnosti</a></p>
         </form>
 
-        <p style="margin-top: var(--space-8); font-size: var(--text-sm); color: var(--color-mute);">Lahko tudi pišete na <a href="mailto:ivo@ivofrank.com" style="color: var(--color-amber-dark); font-weight: 600;">ivo@ivofrank.com</a> ali pokličete na <a href="tel:+38669650553" style="color: var(--color-amber-dark); font-weight: 600;">+386 69 650 553</a>.</p>
+        <p style="margin-top: var(--space-8); font-size: var(--text-sm); color: var(--color-mute);">Lahko pa pišete na <a href="mailto:ivo@ivofrank.com" style="color: var(--color-amber-dark); font-weight: 600;">ivo@ivofrank.com</a> ali pokličete <a href="tel:+38669650553" style="color: var(--color-amber-dark); font-weight: 600;">+386 69 650 553</a>.</p>
       </div>
     </section>
   </main>
@@ -808,11 +692,11 @@
         fetch(FORM_ENDPOINT, {
           method: "POST",
           headers: { "Accept": "application/json", "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, email: email, website: website, project: project, source: "portfolio-page" })
+          body: JSON.stringify({ name: name, email: email, website: website, project: project, source: "homepage-v4" })
         })
           .then(function (res) { if (!res.ok) throw new Error("err"); return res.json().catch(function () { return {}; }); })
           .then(function () {
-            setMsg("Hvala. Povezavo pregledam in odgovorim v 24 urah.", "success");
+            setMsg("Hvala. V 24 urah vam odgovorim s predlogom termina.", "success");
             showToast("Povezava poslana ✓", "success");
             form.reset();
           })
@@ -822,7 +706,7 @@
           })
           .finally(function () {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Pošljite povezavo za 20-minutni videoklic";
+            submitBtn.textContent = "Pošljite povezavo";
           });
       });
 
